@@ -30,6 +30,7 @@ func ProcessSettings(c *fiber.Ctx) error {
 
     return c.Render("form", fiber.Map{"Store": *store, "Id":  store.Id, "Token":  store.Token})
 }
+
 func ProcessStateInstance(c *fiber.Ctx) error {
 	if store == nil {
 		return c.Render("login", fiber.Map{})
@@ -41,6 +42,7 @@ func ProcessStateInstance(c *fiber.Ctx) error {
 
     return c.Render("form", fiber.Map{"Store": *store, "Id":  store.Id, "Token":  store.Token})
 }
+
 func ProcessMessage(c *fiber.Ctx) error {
 	if store == nil {
 		return c.Render("login", fiber.Map{})
@@ -167,7 +169,7 @@ func main() {
 	app.Get("/stateInstance", ProcessStateInstance)
 
 
-	app.Listen(":3000")
+	app.Listen("10.100.102.6:3000")
 }
 
 type ResultSettings struct {
