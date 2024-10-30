@@ -1,0 +1,57 @@
+<!-- views/form.html -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green API test</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div>
+      <div>
+        <text> Instance ID</text>
+        <p>{{.Id}}</p>
+
+        <text>Token</text>
+        <p>{{.Token}}</p>
+      </div>
+      <div>
+        <form action="/settings" method="get">
+          <button type="submit">Get Settings</button>
+        </form>
+        <form action="/stateInstance" method="get">
+          <button type="submit">Get State Instance</button>
+        </form>
+        <form action="/message" method="post">
+          <label for="message">Enter message:</label>
+          <input type="text" name="message" required />
+          <button type="submit">Send</button>
+        </form>
+        <form action="/fileUrl" method="post">
+          <label for="caption">Enter caption:</label>
+          <input type="text" id="caption" name="caption" required />
+          <label for="url">Enter File URL:</label>
+          <input type="text" id="url" name="url" required />
+          <button type="submit">Send File URL</button>
+        </form>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <text>LastMessage ID</text>
+        <p>{{.Store.LastMessage}}</p>
+      </div>
+      <div>
+        <text>Chat Id</text>
+        <p>{{.Store.Settings.Wid}}</p>
+      </div>
+      <div>
+        <text>State</text>
+        <p>{{.Store.StateInst}}</p>
+      </div>
+    </div>
+  </body>
+</html>
