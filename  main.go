@@ -169,7 +169,7 @@ func main() {
 	app.Get("/stateInstance", ProcessStateInstance)
 
 
-	app.Listen("10.100.102.6:3000")
+	app.Listen(":3000")
 }
 
 type ResultSettings struct {
