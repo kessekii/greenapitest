@@ -8,12 +8,8 @@ require (
 )
 
 require (
-	github.com/gofiber/fiber v1.14.6 // indirect
 	github.com/gofiber/template v1.8.3 // indirect
 	github.com/gofiber/utils v1.1.0 // indirect
-	github.com/gorilla/schema v1.1.0 // indirect
-	github.com/philhofer/fwd v1.1.2 // indirect
-	github.com/tinylib/msgp v1.1.8 // indirect
 )
 
 require (
